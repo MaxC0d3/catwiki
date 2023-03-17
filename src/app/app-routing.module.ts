@@ -1,23 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailComponent } from './@views/Detail_/Detail/Detail.component';
+import { HomeComponent } from './@views/Home_/Home/Home.component';
+import { LoginComponent } from './@views/Login_/Login/Login.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>
-      import('./@views/Home_/home-module.module').then((m) => m.HomeModule),
+    component: HomeComponent,
   },
   {
     path: 'detail',
-    loadChildren: () =>
-      import('./@views/Detail_/detail-module.module').then(
-        (m) => m.DetailModule
-      ),
+    component: DetailComponent,
   },
   {
     path: 'login',
-    loadChildren: () =>
-      import('./@views/Login_/login-module.module').then((m) => m.LoginModule),
+    component: LoginComponent,
   },
 ];
 
