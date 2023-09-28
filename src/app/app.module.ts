@@ -4,10 +4,9 @@ import { ViewsModule } from './@views/views.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IntroComponent } from './@Components/intro/intro.component';
 
 @NgModule({
-  declarations: [AppComponent, IntroComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, ViewsModule],
   providers: [],
   bootstrap: [AppComponent],
