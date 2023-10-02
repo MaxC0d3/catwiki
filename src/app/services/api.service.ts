@@ -13,4 +13,10 @@ export class ApiService {
   public getById(id: string): Observable<any> {
     return this.http.get(`${Config.API}/${id}`) as Observable<ObjectEntry>;
   }
+
+  public getAllBreeds(limit: number): Observable<any> {
+    return this.http.get(
+      `${Config.API}/search?limit=${limit}`
+    ) as Observable<ObjectEntry>;
+  }
 }

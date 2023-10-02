@@ -4,3 +4,27 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.most-searched::before {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background-color: #4D270C;
+  border-radius: 20rem;
+  bottom: -10px;
+  position: absolute;
+}
+
+
+.cat-image-bg::before {
+  content: '';
+  width: 30px;
+  height: 174px;
+  background-color: #DEC68B;
+  border-radius: 14px;
+  position: absolute;
+  left: -20px;
+  z-index: -0;
+  top: 0;
+  transform: translateY(15%);
+}

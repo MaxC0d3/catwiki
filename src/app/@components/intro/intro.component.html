@@ -1,5 +1,37 @@
 <div class="bg-black rounded-t-[42px] py-[115px] px-[108px] intro h-[538px]">
-  <img src="../../../assets/CatwikiLogo.svg" alt="CatwikiLogo" class="invert contrast-[150%]" width="200">
-  <p class="font-medium text-[24px] max-w-[330px] text-white mt-[11.19px]">Get to know more about your cat breed</p>
+  <img
+    src="../../../assets/CatwikiLogo.svg"
+    alt="CatwikiLogo"
+    class="invert contrast-[150%]"
+    width="200"
+  />
+  <p class="font-medium text-[24px] max-w-[330px] text-white mt-[11.19px]">
+    Get to know more about your cat breed
+  </p>
   <app-search></app-search>
+</div>
+
+<div class="banner bg-secondary h-[686px] w-full px-[108px] pt-[40px]">
+  <p class="font-medium text-[18px] text-primary most-searched relative">
+    Most Searched Breeds
+  </p>
+  <div class="flex items-end justify-between pt-[42px]">
+    <h2 class="text-5xl font-bold max-w-[450px]">
+      66+ Breeds For you to discover
+    </h2>
+    <a href="/" class="text-[18px] font-bold text-link">SEE MORE</a>
+  </div>
+  <div class="flex gap-12 pt-[46px]">
+    <ng-container *ngFor="let item of data; let i = index">
+      <div *ngIf="i < 4" class="relative cat-image-bg">
+        <img
+          [src]="item.url"
+          alt="A photo of cat"
+          width="220"
+          height="220"
+          class="object-cover object-right image-cat rounded-3xl max-h-[220px] max-w-[220px] min-h-[220px] min-w-[220px] z-[2] relative"
+        />
+      </div>
+    </ng-container>
+  </div>
 </div>

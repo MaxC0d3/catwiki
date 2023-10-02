@@ -25,7 +25,6 @@ export class DetailComponent implements OnInit {
     this.http.getById(this.id).subscribe((entryData: ObjectEntry) => {
       this.data = entryData.breeds[0];
       this.image = entryData.url;
-      console.log(entryData.breeds[0]);
     });
   }
 }
