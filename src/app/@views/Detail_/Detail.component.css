@@ -1,0 +1,26 @@
+
+.photograpg {
+  width: 83.64px;
+  height: 220.12px;
+  top: 125px;
+  left: 235px;
+  border-radius: 14px;
+
+  background-color: #dec68b;
+  position: absolute;
+  z-index: -1;
+}
+
+li{
+  display: flex;
+  align-items: center;
+  gap : 10px;
+}
+
+
+
+.image-container img {
+  width: 150px;
+  height: 175px;
+  border-radius: 20px;
+}
