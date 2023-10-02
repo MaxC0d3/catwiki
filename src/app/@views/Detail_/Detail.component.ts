@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
-import { ObjectEntry } from 'src/app/types/api';
+import { Breed, ObjectEntry } from 'src/app/types/api';
 
 @Component({
   selector: 'app-Detail',
@@ -10,10 +10,9 @@ import { ObjectEntry } from 'src/app/types/api';
   styleUrls: ['./Detail.component.css'],
 })
 export class DetailComponent implements OnInit {
-  text: string = 'Alert, Agile, Energetic, Demanding, Intelligent';
-
-  private data: ObjectEntry = {};
-  private id: string = '';
+  data: Breed;
+  id: string;
+  image: string;
 
   constructor(
     private readonly http: ApiService,
@@ -23,6 +22,10 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
 
-    this.http.get(this.id).subscribe((entryData) => (this.data = entryData));
+    this.http.getById(this.id).subscribe((entryData: ObjectEntry) => {
+      this.data = entryData.breeds[0];
+      this.image = entryData.url;
+      console.log(entryData.breeds[0]);
+    });
   }
 }

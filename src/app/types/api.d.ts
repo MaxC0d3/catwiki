@@ -1,9 +1,9 @@
 export interface ObjectEntry {
-  id?: string;
-  url?: string;
-  breeds?: Breed[];
-  width?: number;
-  height?: number;
+  id: string;
+  url: string;
+  breeds: Breed[];
+  width: number;
+  height: number;
 }
 
 export interface Breed {

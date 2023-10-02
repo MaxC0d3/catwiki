@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./status-bar.component.css'],
 })
 export class StatusBarComponent {
-  @Input() adaptabilityLevel: number = 0;
+  @Input() adaptabilityLevel: number;
 
   barras: boolean[] = [false, false, false, false, false];
 

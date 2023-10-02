@@ -1,54 +1,51 @@
 <div class="grid grid-cols-[1fr_1fr]">
   <div class="photo">
-    <img src="../../../assets/images/image 4.jpg" alt=""
-      class="w-[250px] h-[275px] top-[109px] ml-[148.96px] rounded-[14px]" />
+    <img [src]="image" alt="'A photo of {{data.name}}'"
+      class="w-[250px] h-[275px] top-[109px] ml-[148.96px] rounded-[14px] object-cover object-right" />
     <div class="photograpg"></div>
   </div>
 
   <div class="space-y-5 text-information r">
     <h1 class="text-[#524e4c] font-montserrat text-[36px] font-semibold leading-normal">
-      TEXTO
+      {{data.name}}
     </h1>
     <p class="text-[#291507] font-montserrat text-20 leading-normal">
-      Bengals are a lot of fun to live with, but they're definitely not the cat
-      for everyone, or for first-time cat owners. Extremely intelligent, curious
-      and active, they demand a lot of interaction and woe betide the owner who
-      doesn't provide it.
+      {{data.description}}
     </p>
 
     <ul class="flex flex-col items-start space-y-6">
-      <li><strong>Temperament:</strong> {{ text }}</li>
-      <li><strong>Origin:</strong> {{ text }}</li>
-      <li><strong>Life Span:</strong> {{ text }}</li>
+      <li><strong>Temperament:</strong> {{ data.temperament }}</li>
+      <li><strong>Origin:</strong> {{ data.origin }}</li>
+      <li><strong>Life Span:</strong> {{ data.life_span }}</li>
       <li class="">
         <strong class="mr-2">Adaptability:</strong>
-        <app-status-bar [adaptabilityLevel]="3"></app-status-bar>
+        <app-status-bar [adaptabilityLevel]=data.adaptability></app-status-bar>
       </li>
       <li>
         <strong>Affection level:</strong>
-        <app-status-bar [adaptabilityLevel]="5"></app-status-bar>
+        <app-status-bar [adaptabilityLevel]=data.affection_level></app-status-bar>
       </li>
       <li>
         <strong>Child Friendly:</strong>
-        <app-status-bar [adaptabilityLevel]="4"></app-status-bar>
+        <app-status-bar [adaptabilityLevel]=data.child_friendly></app-status-bar>
       </li>
       <li>
         <strong>Grooming: </strong>
-        <app-status-bar [adaptabilityLevel]="1"></app-status-bar>
+        <app-status-bar [adaptabilityLevel]=data.grooming></app-status-bar>
       </li>
       <li>
         <strong>Health Issues: </strong>
-        <app-status-bar [adaptabilityLevel]="3"></app-status-bar>
+        <app-status-bar [adaptabilityLevel]=data.health_issues></app-status-bar>
       </li>
 
       <li>
         <strong>Social Needs:</strong>
-        <app-status-bar [adaptabilityLevel]="5"></app-status-bar>
+        <app-status-bar [adaptabilityLevel]=data.social_needs></app-status-bar>
       </li>
 
       <li>
         <strong>Stranger Friendly:</strong>
-        <app-status-bar [adaptabilityLevel]="2"></app-status-bar>
+        <app-status-bar [adaptabilityLevel]=data.stranger_friendly></app-status-bar>
       </li>
     </ul>
   </div>

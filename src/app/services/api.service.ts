@@ -10,7 +10,7 @@ import { ObjectEntry } from '../types/api';
 export class ApiService {
   constructor(private readonly http: HttpClient) {}
 
-  public get(id: string): Observable<ObjectEntry> {
-    return this.http.get(`${Config.API}/${id}`);
+  public getById(id: string): Observable<any> {
+    return this.http.get(`${Config.API}/${id}`) as Observable<ObjectEntry>;
   }
 }
