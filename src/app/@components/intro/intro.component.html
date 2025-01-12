@@ -21,9 +21,9 @@
     </h2>
     <a href="/" class="text-[18px] font-bold text-link">SEE MORE</a>
   </div>
-  <div class="flex gap-12 pt-[46px]">
+  <div class="flex gap-12 pt-[46px] max-w-3xl lg:max-w-none overflow-auto">
     <ng-container *ngFor="let item of data; let i = index">
-      <div *ngIf="i < 4" class="relative cat-image-bg">
+      <div *ngIf="i < 4" class="relative cat-image-bg ml-12">
         <img
           [src]="item.url"
           alt="A photo of cat"
