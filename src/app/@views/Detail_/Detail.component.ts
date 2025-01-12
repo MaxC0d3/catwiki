@@ -4,10 +4,10 @@ import { ApiService } from 'src/app/services/api.service';
 import { Breed, ObjectEntry } from 'src/app/types/api';
 
 @Component({
-  selector: 'app-Detail',
-  templateUrl: './Detail.component.html',
-
-  styleUrls: ['./Detail.component.css'],
+    selector: 'app-Detail',
+    templateUrl: './Detail.component.html',
+    styleUrls: ['./Detail.component.css'],
+    standalone: false
 })
 export class DetailComponent implements OnInit {
   data: Breed;
