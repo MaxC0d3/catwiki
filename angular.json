@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "catwiki:build:production"
+              "buildTarget": "catwiki:build:production"
             },
             "development": {
-              "browserTarget": "catwiki:build:development"
+              "buildTarget": "catwiki:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "catwiki:build"
+            "buildTarget": "catwiki:build"
           }
         },
         "test": {
