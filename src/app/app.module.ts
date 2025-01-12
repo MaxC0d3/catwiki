@@ -1,7 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import {} from '@angular/compiler';
 import { HeaderComponent } from './@components/header/header.component';
 import { IntroComponent } from './@components/intro/intro.component';
@@ -12,19 +12,15 @@ import { HomeComponent } from './@views/Home_/Home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    IntroComponent,
-    HomeComponent,
-    SearchComponent,
-    DetailComponent,
-    StatusBarComponent,
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        IntroComponent,
+        HomeComponent,
+        SearchComponent,
+        DetailComponent,
+        StatusBarComponent,
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    bootstrap: [AppComponent], imports: [BrowserModule, AppRoutingModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
